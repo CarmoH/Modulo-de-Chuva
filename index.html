@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Leituras dos Sensores</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Gráfico de Leitura - Últimas Leituras</h2>
+    <canvas id="grafico" width="600" height="300"></canvas>
+
+    <script>
+        async function atualizarGrafico() {
+            const resposta = await fetch('/dados');
+            const dados = await resposta.json();
+
+            const horas = dados.map(d => d.hora);
+            const chuva = dados.map(d => d.valor_chuva);
+            const luz = dados.map(d => d.valor_luz);
+
+            const ctx = document.getElementById('grafico').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: horas,
+                    datasets: [
+                        {
+                            label: 'Chuva',
+                            data: chuva,
+                            borderColor: 'blue',
+                            fill: false
+                        },
+                        {
+                            label: 'Luz',
+                            data: luz,
+                            borderColor: 'orange',
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        atualizarGrafico();
+        setInterval(atualizarGrafico, 10000); // Atualiza a cada 10s
+    </script>
+</body>
+</html>
