@@ -15,7 +15,7 @@ Um sistema de **monitoramento de chuva** que integra **hardware (sensor + microc
 - **Backend:** Python (Flask)
 - **Banco de dados:** SQL
 - **Frontend:** HTML, CSS e JavaScript
-- 
+  
 - ---
 
 ## 📊 Funcionalidades
