@@ -13,7 +13,7 @@ Um sistema de **monitoramento de chuva** que integra **hardware (sensor + microc
 
 - **Hardware:** Arduino / ESP (com sensor de chuva)
 - **Backend:** Python (Flask)
-- **Banco de dados:** pgAdmin
+- **Banco de dados:** SQL
 - **Frontend:** HTML, CSS e JavaScript
   
 - ---
