@@ -5,7 +5,7 @@
 [![SQLite](https://img.shields.io/badge/Database-SQL-lightgrey.svg)](https://www.sqlite.org/)
 
 
-Um sistema de **monitoramento de chuva** que integra **hardware (sensor + microcontrolador)**, **backend em Python** e uma **interface web** com **SQLite** para registro e análise de dados.
+Um sistema de **monitoramento de chuva** que integra **hardware (sensor + microcontrolador)**, **backend em Python** e uma **interface web** com **SQL** para registro e análise de dados.
 
 ---
 
@@ -21,6 +21,6 @@ Um sistema de **monitoramento de chuva** que integra **hardware (sensor + microc
 ## 📊 Funcionalidades
 
 ✔️ Coleta e registro de dados do sensor de chuva  
-✔️ Armazenamento histórico no banco SQLite  
+✔️ Armazenamento histórico no banco SQL  
 ✔️ Interface web para visualização dos dados  
 ⬜ Gráficos interativos (em tempo real) 
